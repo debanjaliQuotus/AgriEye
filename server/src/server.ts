@@ -132,9 +132,9 @@ app.use('/api/users', userRoutes);
 app.use('/api/motion', motionEventRoutes);
 app.use('/api/notification', smsRoutes);
 
-app.use(express.static(path.join(__dirname, '..', '..', 'client', 'dist')))
+app.use(express.static(path.join(__dirname, '..', 'client', 'dist')))
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, '..', '..', 'client', 'dist', 'index.html'))
+  res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'index.html'))
 });
 
 
