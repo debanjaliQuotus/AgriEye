@@ -195,7 +195,7 @@ const Register: React.FC = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://agrieye-1.onrender.com/api/users/register",
         payload
       );
       setSuccess("Registration successful! You can now login.");
