@@ -115,9 +115,9 @@ app.use('/api/uploads', express_1.default.static(uploadsPath));
 app.use('/api/users', userRoutes_1.default);
 app.use('/api/motion', motionEventRoutes_1.default);
 app.use('/api/notification', smsRoutes_1.default);
-app.use(express_1.default.static(path_1.default.join(__dirname, '..', '..', 'client', 'dist')));
-app.get('*', (_req, res) => {
-    res.sendFile(path_1.default.join(__dirname, '..', '..', 'client', 'dist', 'index.html'));
+app.use(express_1.default.static(path_1.default.join(__dirname, "../client/dist")));
+app.get("*", (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, "../client/dist/index.html"));
 });
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

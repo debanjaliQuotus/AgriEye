@@ -27,10 +27,6 @@ const authenticate = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
         }
         // Verify token with correct type assertion
         const decoded = jsonwebtoken_1.default.verify(token, process.env.JWT_SECRET);
-        // Validate role
-        if (!isValidRole(decoded.role)) {
-            throw new Error('Invalid user role');
-        }
         // Add type-safe user info to request
         req.user = Object.assign(Object.assign({}, decoded), { role: decoded.role });
         next();
@@ -48,7 +44,3 @@ const authenticate = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
     }
 });
 exports.authenticate = authenticate;
-// Helper function to validate roles
-function isValidRole(role) {
-    return ['admin', 'farmer'].includes(role);
-}
