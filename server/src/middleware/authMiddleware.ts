@@ -25,10 +25,7 @@ export const authenticate = async (req: AuthRequest, res: Response, next: NextFu
     // Verify token with correct type assertion
     const decoded = jwt.verify(token, process.env.JWT_SECRET) as Omit<JwtPayloadUser, 'role'> & { role: string };
     
-    // Validate role
-    if (!isValidRole(decoded.role)) {
-      throw new Error('Invalid user role');
-    }
+    
 
     // Add type-safe user info to request
     req.user = {
@@ -52,8 +49,3 @@ export const authenticate = async (req: AuthRequest, res: Response, next: NextFu
     });
   }
 };
-
-// Helper function to validate roles
-function isValidRole(role: string): role is UserRole {
-  return ['admin', 'farmer'].includes(role);
-}
