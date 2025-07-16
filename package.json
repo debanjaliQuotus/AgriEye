@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p server/tsconfig.json",
     "start": "node dist/server.js",
     "dev": "concurrently \"tsc -w -p server/tsconfig.json\" \"nodemon server/dist/server.js\""
   },
