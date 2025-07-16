@@ -86,7 +86,7 @@ export const handleApiError = (error: unknown): string => {
 // Authenticated Axios client creator
 export const createApiClient = (token?: string) => {
   const client = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://agrieye-1.onrender.com/api',
     headers: {
       'Content-Type': 'application/json',
       ...(token && { 'Authorization': `Bearer ${token}` })
