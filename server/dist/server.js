@@ -24,7 +24,7 @@ if (!process.env.TWILIO_ACCOUNT_SID || !process.env.TWILIO_AUTH_TOKEN || !proces
 (0, db_1.default)();
 // Enhanced CORS configuration
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://agrieye-1.onrender.com',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token', 'Accept', 'X-Requested-With'],
@@ -115,9 +115,9 @@ app.use('/api/uploads', express_1.default.static(uploadsPath));
 app.use('/api/users', userRoutes_1.default);
 app.use('/api/motion', motionEventRoutes_1.default);
 app.use('/api/notification', smsRoutes_1.default);
-app.use(express_1.default.static(path_1.default.join(__dirname, "../client/dist")));
-app.get("*", (req, res) => {
-    res.sendFile(path_1.default.join(__dirname, "../client/dist/index.html"));
+app.use(express_1.default.static(path_1.default.join(__dirname, '../../client/dist')));
+app.get('*', (req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '../../client/dist/index.html'));
 });
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
