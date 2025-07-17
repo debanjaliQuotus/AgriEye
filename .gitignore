@@ -6,6 +6,9 @@ node_modules/
 /cache/
 /artifacts/
 
+# Ignore visionapi source JSON files containing sensitive credentials
+/server/src/visionapi/
+
 # TypeChain files
 /typechain/
 /typechain-types/
