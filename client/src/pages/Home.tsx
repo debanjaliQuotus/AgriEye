@@ -104,7 +104,7 @@ const Index = () => {
     <div className="flex items-center justify-center mb-8">
       <div className="relative">
         <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-        <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-full shadow-2xl">
+        <div className="relative bg-white/20 backdrop-blur-sm p-8 rounded-full shadow-2xl">
             <img
           src="/assets/logo.png"
           alt="Agri Eye Logo"
