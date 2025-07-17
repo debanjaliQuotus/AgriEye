@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout";
 import { notificationService } from "../../services/notificationService";
 import { useAuth } from "../../context/AuthContext";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
-import { RefreshCw, Play, Pause } from "lucide-react";
 
 interface DetectedObjectType {
   label: string;
@@ -44,23 +43,16 @@ const MotionEvent: React.FC = () => {
   const [events, setEvents] = useState<MotionEventType[]>([]);
   const [filteredEvents, setFilteredEvents] = useState<MotionEventType[]>([]);
   const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
   const [sortOption, setSortOption] = useState("all");
-  const [autoRefresh, setAutoRefresh] = useState(true);
-  const [refreshInterval, setRefreshInterval] = useState(30); // seconds
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const { user } = useAuth();
   const latestEventIdRef = useRef<string | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const rawPhoneNumber =
     localStorage.getItem("userPhoneNumber") || user?.phoneNumber || "";
   const formattedPhoneNumber = formatPhoneNumber(rawPhoneNumber);
 
-  const fetchEvents = async (showRefreshing = false) => {
+  const fetchEvents = async () => {
     try {
-      if (showRefreshing) setRefreshing(true);
-      
       const client = createApiClient();
       const res = await client.get(ENDPOINTS.GET_MOTION_EVENTS);
 
@@ -81,7 +73,6 @@ const MotionEvent: React.FC = () => {
 
       setEvents(sorted);
       applySorting(sortOption, sorted);
-      setLastUpdated(new Date());
 
       const newestEvent = sorted[0];
       if (
@@ -106,39 +97,14 @@ const MotionEvent: React.FC = () => {
       console.error("Failed to fetch events:", err);
     } finally {
       setLoading(false);
-      if (showRefreshing) setRefreshing(false);
-    }
-  };
-
-  const startAutoRefresh = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-    intervalRef.current = setInterval(() => fetchEvents(), refreshInterval * 1000);
-  };
-
-  const stopAutoRefresh = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
     }
   };
 
   useEffect(() => {
     fetchEvents();
-    if (autoRefresh) {
-      startAutoRefresh();
-    }
-    return () => stopAutoRefresh();
+    const interval = setInterval(fetchEvents, 30000);
+    return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    if (autoRefresh) {
-      startAutoRefresh();
-    } else {
-      stopAutoRefresh();
-    }
-  }, [autoRefresh, refreshInterval]);
 
   const applySorting = (sortType: string, eventList: MotionEventType[]) => {
     const sorted = [...eventList];
@@ -187,67 +153,15 @@ const MotionEvent: React.FC = () => {
     }
   };
 
-  const handleManualRefresh = () => {
-    fetchEvents(true);
-  };
-
-  const toggleAutoRefresh = () => {
-    setAutoRefresh(!autoRefresh);
-  };
-
   return (
     <Layout>
       {loading ? (
         <p className="text-center text-gray-500">Loading events...</p>
       ) : (
         <div className="flex flex-col items-end w-full">
-          <div className="w-full flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Motion Events</h2>
-            
-            {/* Auto-refresh controls */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-700 dark:text-white">
-                  Refresh every:
-                </label>
-                <select
-                  value={refreshInterval}
-                  onChange={(e) => setRefreshInterval(Number(e.target.value))}
-                  className="border px-2 py-1 rounded text-sm dark:bg-gray-800 dark:text-white"
-                  disabled={!autoRefresh}
-                >
-                  <option value={10}>10s</option>
-                  <option value={30}>30s</option>
-                  <option value={60}>1m</option>
-                  <option value={300}>5m</option>
-                </select>
-              </div>
+          <h2 className="text-2xl font-bold mb-4">Motion Events</h2>
 
-              <button
-                onClick={toggleAutoRefresh}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  autoRefresh
-                    ? "bg-green-100 text-green-700 hover:bg-green-200"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
-              >
-                {autoRefresh ? <Pause size={16} /> : <Play size={16} />}
-                {autoRefresh ? "Stop Auto" : "Start Auto"}
-              </button>
-
-              <button
-                onClick={handleManualRefresh}
-                disabled={refreshing}
-                className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 text-sm font-medium transition-colors"
-              >
-                <RefreshCw size={16} className={refreshing ? "animate-spin" : ""} />
-                {refreshing ? "Refreshing..." : "Refresh"}
-              </button>
-            </div>
-          </div>
-
-          {/* Status info */}
-          <div className="w-full mb-4 text-sm space-y-1">
+          <div className="mb-4 text-sm">
             {formattedPhoneNumber ? (
               <p className="text-green-600">
                 Notifications will be sent to: {formattedPhoneNumber}
@@ -255,12 +169,6 @@ const MotionEvent: React.FC = () => {
             ) : (
               <p className="text-amber-600">
                 No valid phone number found. Please update your profile.
-              </p>
-            )}
-            
-            {lastUpdated && (
-              <p className="text-gray-500 dark:text-gray-400">
-                Last updated: {lastUpdated.toLocaleTimeString()}
               </p>
             )}
           </div>
