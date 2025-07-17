@@ -1,6 +1,6 @@
 node_modules/
 .env
-server/src/visionapi/crucial-raceway-459108-k2-efcf8535a54d.json
+/server/dist/visionapi/crucial-raceway-459108-k2-efcf8535a54d.json
 
 # Hardhat files
 /cache/
