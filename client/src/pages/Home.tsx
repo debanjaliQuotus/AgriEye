@@ -9,7 +9,7 @@ const Index = () => {
       <nav className="bg-white/80 backdrop-blur-md border-b border-emerald-200 px-2 sm:px-6 lg:px-8 shadow-sm">
   <div className="max-w-7xl mx-auto h-20 flex items-center justify-between">
     <div className="flex items-center space-x-3">
-      <div className="h-20 w-20 bg-emerald-100 backdrop-blur-sm rounded-lg shadow-sm flex items-center justify-center">
+      <div className="h-20 w-20 bg-white backdrop-blur-sm rounded-lg shadow-sm flex items-center justify-center">
         <img
           src="/assets/logo.png"
           alt="Agri Eye Logo"
@@ -104,7 +104,7 @@ const Index = () => {
     <div className="flex items-center justify-center mb-8">
       <div className="relative">
         <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-        <div className="relative bg-white/20 backdrop-blur-sm p-8 rounded-full shadow-2xl">
+        <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-full shadow-2xl">
             <img
           src="/assets/logo.png"
           alt="Agri Eye Logo"
