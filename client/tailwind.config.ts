@@ -14,22 +14,53 @@ export default {
         '2xl': '1536px',    // Large desktops
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-in-left': 'slideInLeft 0.3s ease-in-out',
-        'slide-out-left': 'slideOutLeft 0.3s ease-in-out',
+        'gradient': 'gradient 8s linear infinite',
+        'float': 'float 8s ease-in-out infinite',
+        'shine': 'shine 4s linear infinite',
+        'flip': 'flip 0.6s ease-in-out',
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        gradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
         },
-        slideInLeft: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0)' },
+        float: {
+          '0%, 100%': { 
+            transform: 'translateY(0) rotate(0deg)' 
+          },
+          '50%': { 
+            transform: 'translateY(-15px) rotate(5deg)' 
+          },
         },
-        slideOutLeft: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
+        shine: {
+          '0%': {
+            'background-position': '-100% 0'
+          },
+          '100%': {
+            'background-position': '200% 0'
+          }
+        },
+        flip: {
+          '0%': {
+            transform: 'rotateY(0deg)'
+          },
+          '100%': {
+            transform: 'rotateY(180deg)'
+          }
+        }
+      },
+      extend: {
+        transformStyle: {
+          'preserve-3d': 'preserve-3d',
+        },
+        perspective: {
+          '1000': '1000px',
         },
       },
       width: {
@@ -44,6 +75,17 @@ export default {
     },
   },
   plugins: [
-    tailwindScrollbar
+    tailwindScrollbar,
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.transform-style-preserve-3d': {
+          'transform-style': 'preserve-3d',
+        },
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+      }
+      addUtilities(newUtilities)
+    }
   ],
 } as const;

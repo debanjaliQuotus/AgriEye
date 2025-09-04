@@ -29,7 +29,14 @@ connectDB();
 
 // Enhanced CORS configuration
 const corsOptions: cors.CorsOptions = {
-  origin: 'https://agrieye-1.onrender.com',
+  origin: (origin, callback) => {
+    const allowedOrigins = ['https://agrieye-1.onrender.com', 'http://localhost:5000'];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token', 'Accept', 'X-Requested-With'],

@@ -222,11 +222,11 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen flex flex-col lg:flex-row bg-gradient-to-br from-emerald-50 via-white to-teal-50">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-10 lg:top-20 left-10 lg:left-20 w-16 lg:w-32 h-16 lg:h-32 rounded-full bg-gradient-to-r from-cyan-200 to-blue-300 opacity-20"
+          className="absolute top-10 lg:top-20 left-10 lg:left-20 w-16 lg:w-32 h-16 lg:h-32 rounded-full bg-gradient-to-r from-emerald-200 to-teal-300 opacity-20"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -238,7 +238,7 @@ const Register: React.FC = () => {
           }}
         />
         <motion.div
-          className="absolute top-20 lg:top-40 right-20 lg:right-40 w-12 lg:w-24 h-12 lg:h-24 rounded-full bg-gradient-to-r from-purple-200 to-pink-300 opacity-20"
+          className="absolute top-20 lg:top-40 right-20 lg:right-40 w-12 lg:w-24 h-12 lg:h-24 rounded-full bg-gradient-to-r from-teal-200 to-blue-300 opacity-20"
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -250,7 +250,7 @@ const Register: React.FC = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 lg:bottom-40 left-20 lg:left-40 w-10 lg:w-20 h-10 lg:h-20 rounded-full bg-gradient-to-r from-emerald-200 to-teal-300 opacity-20"
+          className="absolute bottom-20 lg:bottom-40 left-20 lg:left-40 w-10 lg:w-20 h-10 lg:h-20 rounded-full bg-gradient-to-r from-blue-200 to-cyan-300 opacity-20"
           animate={{
             scale: [1, 1.3, 1],
             rotate: [0, 360],
@@ -264,8 +264,8 @@ const Register: React.FC = () => {
       </div>
 
       {/* Left side - IoT Themed Content - CONSTANT */}
-      <div className="hidden lg:flex lg:w-1/2 relative z-10 overflow-hidden bg-gradient-to-br from-blue-500 via-purple-600 to-cyan-500">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/90 via-purple-600/90 to-cyan-500/90" />
+      <div className="hidden lg:flex lg:w-1/2 relative z-10 overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-500 to-blue-600">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/90 via-teal-500/90 to-blue-600/90" />
 
         {/* Circuit pattern overlay */}
         <div
@@ -300,7 +300,7 @@ const Register: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-cyan-200 via-white to-purple-200 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 text-transparent bg-clip-text">
               Join agriEYE
             </span>
           </motion.h1>
@@ -323,7 +323,7 @@ const Register: React.FC = () => {
           >
             <div className="flex items-center justify-center space-x-3">
               <motion.div
-                className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-cyan-300"
+                className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-emerald-300"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
@@ -331,7 +331,7 @@ const Register: React.FC = () => {
             </div>
             <div className="flex items-center justify-center space-x-3">
               <motion.div
-                className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-purple-300"
+                className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-teal-300"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               />
@@ -339,7 +339,7 @@ const Register: React.FC = () => {
             </div>
             <div className="flex items-center justify-center space-x-3">
               <motion.div
-                className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-emerald-300"
+                className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-blue-300"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
               />
@@ -349,7 +349,7 @@ const Register: React.FC = () => {
 
           {/* Floating tech elements */}
           <motion.div
-            className="absolute top-16 lg:top-20 right-16 lg:right-20 w-4 h-4 lg:w-6 lg:h-6 bg-cyan-400 rounded-sm opacity-60"
+            className="absolute top-16 lg:top-20 right-16 lg:right-20 w-4 h-4 lg:w-6 lg:h-6 bg-emerald-400 rounded-sm opacity-60"
             animate={{
               y: [0, -20, 0],
               rotate: [0, 180, 360],
@@ -361,7 +361,7 @@ const Register: React.FC = () => {
             }}
           />
           <motion.div
-            className="absolute bottom-24 lg:bottom-32 left-12 lg:left-16 w-3 h-3 lg:w-4 lg:h-4 bg-purple-400 rounded-full opacity-60"
+            className="absolute bottom-24 lg:bottom-32 left-12 lg:left-16 w-3 h-3 lg:w-4 lg:h-4 bg-teal-400 rounded-full opacity-60"
             animate={{
               x: [0, 20, 0],
               scale: [1, 1.5, 1],
@@ -393,7 +393,7 @@ const Register: React.FC = () => {
             </motion.div>
 
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight mb-2">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-600 text-transparent bg-clip-text">
                 Create Account
               </span>
             </h2>
@@ -490,7 +490,7 @@ const Register: React.FC = () => {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-700 hover:via-purple-700 hover:to-cyan-700 text-white py-3 rounded-xl transition-all duration-300 font-semibold flex items-center justify-center text-sm lg:text-base shadow-lg shadow-blue-500/25"
+                className="w-full bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-600 hover:from-emerald-700 hover:via-teal-600 hover:to-blue-700 text-white py-3 rounded-xl transition-all duration-300 font-semibold flex items-center justify-center text-sm lg:text-base shadow-lg shadow-emerald-500/25"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
