@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
+          <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             {/* Main heading */}
             <h1 className="text-[12vw] sm:text-6xl lg:text-7xl  mb-8 leading-tight font-[font2] uppercase">
               <span className="text-white block mb-2 drop-shadow-lg">
