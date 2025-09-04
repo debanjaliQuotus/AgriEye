@@ -46,11 +46,11 @@ const Hero = () => {
           {/* Left content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
             {/* Main heading */}
-            <h1 className="text-[12vw] sm:text-6xl lg:text-7xl  mb-8 leading-tight font-[font2] uppercase">
-              <span className="text-white block mb-2 drop-shadow-lg">
+            <h1 className="text-[14vw] sm:text-7xl lg:text-8xl mb-8 leading-tight font-[font2] uppercase">
+              <span className="text-white mb-2 drop-shadow-lg">
                 Advanced Animal
               </span>
-              <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 text-transparent bg-clip-text block drop-shadow-sm">
+              <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 text-transparent bg-clip-text drop-shadow-sm">
                 Detection System
               </span>
             </h1>
