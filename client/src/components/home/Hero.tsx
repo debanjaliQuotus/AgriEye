@@ -48,10 +48,7 @@ const Hero = () => {
             {/* Main heading */}
             <h1 className="text-[14vw] sm:text-7xl lg:text-8xl mb-8 leading-tight font-[font2] uppercase">
               <span className="text-white mb-2 drop-shadow-lg">
-                Advanced Animal
-              </span>
-              <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 text-transparent bg-clip-text drop-shadow-sm">
-                Detection System
+                Advanced Animal <br />  Detection System
               </span>
             </h1>
 
@@ -65,7 +62,7 @@ const Hero = () => {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-6 mb-16 justify-center lg:justify-start">
               <Button
-              onClick={()=>navigate('/register')}
+                onClick={() => navigate("/register")}
                 size="lg"
                 className="bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 text-white text-lg px-4 py-2 h-auto shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-white/20 group cursor-pointer"
               >
