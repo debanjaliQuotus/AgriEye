@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "Node16",
+    "module": "commonjs",
     "lib": ["esnext", "dom"],
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true, 
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node",
+    "types": ["node"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
