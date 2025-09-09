@@ -139,7 +139,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/motion', motionEventRoutes);
 app.use('/api/notification', smsRoutes);
 
-const clientPath = path.join(__dirname, 'client', 'dist');
+const clientPath = path.join(__dirname, '..', '..', 'client', 'dist');
 
 // Serve static files from the client's build directory
 app.use(express.static(clientPath));
@@ -148,10 +148,6 @@ app.use(express.static(clientPath));
 app.get('*', (req, res) => {
   res.sendFile(path.join(clientPath, 'index.html'));
 });
-
-
-
-
 
 const PORT = process.env.PORT || 5000;
 

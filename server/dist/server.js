@@ -123,7 +123,7 @@ app.use('/api/uploads', express_1.default.static(uploadsPath));
 app.use('/api/users', userRoutes_1.default);
 app.use('/api/motion', motionEventRoutes_1.default);
 app.use('/api/notification', smsRoutes_1.default);
-const clientPath = path_1.default.join(__dirname, 'client', 'dist');
+const clientPath = path_1.default.join(__dirname, '..', '..', 'client', 'dist');
 // Serve static files from the client's build directory
 app.use(express_1.default.static(clientPath));
 // For all other routes, send the index.html file
