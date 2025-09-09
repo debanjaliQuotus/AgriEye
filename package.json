@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json && npm run copy-visionapi-json",
+    "build": "tsc -p server/tsconfig.json && npm run copy-visionapi-json",
     "copy-visionapi-json": "mkdir server\\dist\\visionapi && cpx \"server/src/visionapi/*.json\" server/dist/visionapi",
     "start": "node server/dist/server.js",
     "dev": "concurrently \"tsc -w -p tsconfig.json\" \"nodemon server/dist/server.js\"",
