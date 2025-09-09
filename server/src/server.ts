@@ -30,7 +30,7 @@ connectDB();
 // Enhanced CORS configuration
 const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
-    const allowedOrigins = ['https://agrieye-1.onrender.com', 'http://localhost:5000'];
+    const allowedOrigins = ['https://agrieye.onrender.com/',];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
