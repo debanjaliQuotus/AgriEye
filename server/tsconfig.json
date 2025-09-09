@@ -13,6 +13,12 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node16",
+
+    // 👇 Key fix: explicitly tell TS where to find type definitions
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+
     "types": ["node"]
   },
   "include": ["src/**/*"],
