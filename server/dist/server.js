@@ -123,9 +123,8 @@ app.use('/api/uploads', express_1.default.static(uploadsPath));
 app.use('/api/users', userRoutes_1.default);
 app.use('/api/motion', motionEventRoutes_1.default);
 app.use('/api/notification', smsRoutes_1.default);
-const clientPath = path_1.default.join(__dirname, '..', 'client', 'dist');
+const clientPath = path_1.default.join(__dirname, '..', '..', 'client', 'dist');
 app.use(express_1.default.static(clientPath));
-// Serve the index.html file for any request that doesn't match a static file
 app.get('*', (req, res) => {
     res.sendFile(path_1.default.join(clientPath, 'index.html'));
 });
