@@ -13,7 +13,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node16",
-    "typeRoots": ["../node_modules/@types"],
     "types": ["node"]
   },
   "include": ["src/**/*"],
