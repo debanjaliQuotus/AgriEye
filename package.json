@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p server/tsconfig.json && npm run copy-visionapi-json",
-    "copy-visionapi-json": "mkdir server\\dist\\visionapi && cpx \"server/src/visionapi/*.json\" server/dist/visionapi",
+    "copy-visionapi-json": "server/dist/visionapi",
     "start": "node server/dist/server.js",
     "dev": "concurrently \"tsc -w -p server/tsconfig.json\" \"nodemon server/dist/server.js\"",
     "verify-types": "ls -R node_modules/@types | grep node || echo '⚠️ Node types missing'"
@@ -19,6 +19,7 @@
     "@google/generative-ai": "^0.24.1",
     "@openzeppelin/contracts": "^5.3.0",
     "@sendgrid/mail": "^8.1.5",
+    "@types/node": "^24.3.1",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
@@ -43,7 +44,6 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.23",
-    "@types/node": "^24.3.1",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/multer": "^1.4.12",
     "@types/uuid": "^10.0.0",
