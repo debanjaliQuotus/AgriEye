@@ -2,7 +2,7 @@ import axios, {  AxiosError } from "axios";
 
 // Ensure base URL ends with /api
 export const API_BASE_URL = (
-  import.meta.env.VITE_API_URL || "https://agrieye-1.onrender.com/api"
+  import.meta.env.VITE_API_URL || "https://agrieye.onrender.com/"
 ).replace(/\/+$/, "");
 
 export const ENDPOINTS = {
@@ -86,7 +86,7 @@ export const handleApiError = (error: unknown): string => {
 // Authenticated Axios client creator
 export const createApiClient = (token?: string) => {
   const client = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'https://agrieye-1.onrender.com/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://agrieye.onrender.com//api',
     headers: {
       'Content-Type': 'application/json',
       ...(token && { 'Authorization': `Bearer ${token}` })
