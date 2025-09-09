@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p server/tsconfig.json && npm run copy-visionapi-json",
-    "copy-visionapi-json": "server/dist/visionapi",
+    "copy-visionapi-json": "mkdir server\\dist\\visionapi && cpx \"server/src/visionapi/*.json\" server/dist/visionapi",
     "start": "node server/dist/server.js",
     "dev": "concurrently \"tsc -w -p server/tsconfig.json\" \"nodemon server/dist/server.js\"",
     "verify-types": "ls -R node_modules/@types | grep node || echo '⚠️ Node types missing'"
