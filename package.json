@@ -6,7 +6,8 @@
     "build": "tsc -p server/tsconfig.json && npm run copy-visionapi-json",
     "copy-visionapi-json": "mkdir server\\dist\\visionapi && cpx \"server/src/visionapi/*.json\" server/dist/visionapi",
     "start": "node server/dist/server.js",
-    "dev": "concurrently \"tsc -w -p server/tsconfig.json\" \"nodemon server/dist/server.js\""
+    "dev": "concurrently \"tsc -w -p server/tsconfig.json\" \"nodemon server/dist/server.js\"",
+     "postinstall": "npm ls @types/node || echo '⚠️ @types/node not installed!'"
   },
   "keywords": [],
   "author": "",
