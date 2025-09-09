@@ -4,12 +4,12 @@
     "module": "Node16",
     "lib": ["esnext", "dom"],
     "outDir": "./dist",
-    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+    "types": ["node"]
   },
   "include": ["**/*"],
   "exclude": ["node_modules"]
