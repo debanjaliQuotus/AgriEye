@@ -6,11 +6,8 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
-    "strictNullChecks": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node16",
     "types": ["node"]
