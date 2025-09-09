@@ -139,7 +139,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/motion', motionEventRoutes);
 app.use('/api/notification', smsRoutes);
 
-const clientPath = path.join(__dirname, '..', 'client', 'dist');
+const clientPath = path.join(__dirname, '..', '..', 'client', 'dist');
 
 app.use(express.static(clientPath));
 
