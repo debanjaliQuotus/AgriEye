@@ -41,26 +41,26 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10 pt-24 pb-16">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+      <div className="max-w-7xl  px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-12">
+          <div className="w-[45%] lg:w-1/2 text-center lg:text-left">
             {/* Main heading */}
-            <h1 className="text-[18vw] sm:text-7xl lg:text-8xl mb-8 leading-tight font-[font2] uppercase">
+            <h1 className="text-[8vw] sm:text-7xl lg:text-8xl mb-4  font-[font2] uppercase">
               <span className="text-white mb-2 drop-shadow-lg">
                 Advanced Animal <br />  Detection System
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-emerald-100 mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-sm font-[font1]">
+            <p className="text-xl text-emerald-100 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-sm font-[font1]">
               Advanced IoT sensors and AI-powered detection to protect your
               property and livestock from wildlife threats. Monitor, detect, and
               respond in real-time with cutting-edge technology.
             </p>
 
             {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 mb-16 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
               <Button
                 onClick={() => navigate("/register")}
                 size="lg"
@@ -101,7 +101,7 @@ const Hero = () => {
           </div>
 
           {/* Right content - 3D camera/sensor */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end pt-10 lg:pt-0">
             <div className="relative w-full max-w-lg">
               {/* Main device container */}
               <div className="relative transform perspective-1000 hover:rotate-y-[5deg] transition-transform duration-700">

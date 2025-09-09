@@ -31,7 +31,7 @@ const Features = () => {
                 </div>
 
                 {/* Back */}
-                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto">
+                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto font-[font2]">
                   <h3 className="text-xl font-bold mb-4">
                     AI Vision Detection Details
                   </h3>
@@ -41,10 +41,10 @@ const Features = () => {
                     reliable detection in diverse environments.
                   </p>
                   <p className="text-sm leading-relaxed mb-2">
-                    ✅ Recognizes more than <b>500+ species</b>
-                    <br />✅ Works in <b>low-light & night</b> conditions
-                    <br />✅ Real-time processing at <b>30 FPS</b>
-                    <br />✅ Designed for <b>24/7 surveillance</b>
+                    Recognizes more than <b>500+ species</b>
+                    <br /> Works in <b>low-light & night</b> conditions
+                    <br /> Real-time processing at <b>30 FPS</b>
+                    <br /> Designed for <b>24/7 surveillance</b>
                   </p>
                   <p className="text-sm leading-relaxed">
                     Ideal for farms, wildlife monitoring, and property
@@ -74,7 +74,7 @@ const Features = () => {
                 </div>
 
                 {/* Back */}
-                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto">
+                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto font-[font2]">
                   <h3 className="text-xl font-bold mb-4">
                     Instant Alerts Details
                   </h3>
@@ -84,11 +84,11 @@ const Features = () => {
                     calls.
                   </p>
                   <p className="text-sm leading-relaxed mb-2">
-                    ✅ Works with smart home devices
-                    <br />✅ Supports <b>customizable alert zones</b>
+                    Works with smart home devices
+                    <br /> Supports <b>customizable alert zones</b>
                     <br />
-                    ✅ Can trigger lights, sirens, and emergency services
-                    <br />✅ Fully configurable to your needs
+                    Can trigger lights, sirens, and emergency services
+                    <br /> Fully configurable to your needs
                   </p>
                 </div>
               </div>
@@ -114,7 +114,7 @@ const Features = () => {
                 </div>
 
                 {/* Back */}
-                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto">
+                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto font-[font2]">
                   <h3 className="text-xl font-bold mb-4">
                     Zone Mapping Details
                   </h3>
@@ -124,12 +124,12 @@ const Features = () => {
                     zones can be less sensitive.
                   </p>
                   <p className="text-sm leading-relaxed mb-2">
-                    ✅ Flexible <b>multi-zone setup</b>
+                    Flexible <b>multi-zone setup</b>
                     <br />
-                    ✅ Visual mapping interface
+                    Visual mapping interface
                     <br />
-                    ✅ Different alert rules per zone
-                    <br />✅ Easy to configure & monitor
+                    Different alert rules per zone
+                    <br /> Easy to configure & monitor
                   </p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Features = () => {
                 </div>
 
                 {/* Back */}
-                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto">
+                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto font-[font2]">
                   <h3 className="text-xl font-bold mb-4">
                     Smart Detection Details
                   </h3>
@@ -165,12 +165,12 @@ const Features = () => {
                     water sprays.
                   </p>
                   <p className="text-sm leading-relaxed mb-2">
-                    ✅ Non-lethal deterrents
+                    Non-lethal deterrents
                     <br />
-                    ✅ Protects without harming wildlife
+                    Protects without harming wildlife
                     <br />
-                    ✅ Learns and adapts over time
-                    <br />✅ Reduces false alarms
+                    Learns and adapts over time
+                    <br /> Reduces false alarms
                   </p>
                 </div>
               </div>
@@ -196,7 +196,7 @@ const Features = () => {
                 </div>
 
                 {/* Back */}
-                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto">
+                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto font-[font2]">
                   <h3 className="text-xl font-bold mb-4">
                     IoT Network Details
                   </h3>
@@ -206,18 +206,17 @@ const Features = () => {
                     sensors.
                   </p>
                   <p className="text-sm leading-relaxed mb-2">
-                    ✅ Secure IoT communication
+                    Secure IoT communication
                     <br />
-                    ✅ End-to-end encryption
+                    End-to-end encryption
                     <br />
-                    ✅ Battery-powered options
-                    <br />✅ Reliable even in remote areas
+                    Battery-powered options
+                    <br /> Reliable even in remote areas
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Card 6  */}
             {/* Card 6 */}
             <div className="card mx-auto">
               <div className="card-inner rounded-xl shadow-lg shadow-black/50">
@@ -240,7 +239,7 @@ const Features = () => {
                 </div>
 
                 {/* Back */}
-                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto">
+                <div className="card-back rounded-xl bg-slate-900 text-white overflow-y-auto font-[font2]">
                   <h3 className="text-xl font-bold mb-4">
                     24/7 Protection Details
                   </h3>
@@ -249,9 +248,9 @@ const Features = () => {
                     alerts, and smart monitoring to keep your property safe.
                   </p>
                   <p className="text-sm leading-relaxed mb-2">
-                    ✅ Cloud backup support <br />
-                    ✅ Real-time alerts <br />
-                    ✅ Remote monitoring <br />✅ Tamper-resistant system
+                    Cloud backup support <br />
+                    Real-time alerts <br />
+                    Remote monitoring <br />✅ Tamper-resistant system
                   </p>
                 </div>
               </div>

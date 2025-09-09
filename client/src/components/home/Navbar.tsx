@@ -44,12 +44,12 @@ const Navbar = () => {
                 : 'text-white drop-shadow-lg'
               }
             `}>
-              agriEYE
+              AgriEye
             </span>
           </div>
 
           {/* Navigation buttons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-end justify-end space-x-2 pr-2">
             <Link to="/login">
               <Button
                 variant="outline"
