@@ -30,7 +30,8 @@ connectDB();
 // Enhanced CORS configuration
 const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
-    const allowedOrigins = ['https://agrieye.onrender.com/',];
+    // Remove the trailing slash from the URL
+    const allowedOrigins = ['https://agrieye.onrender.com']; 
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
