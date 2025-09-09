@@ -139,11 +139,13 @@ app.use('/api/users', userRoutes);
 app.use('/api/motion', motionEventRoutes);
 app.use('/api/notification', smsRoutes);
 
-app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
+const clientPath = path.join(__dirname, '..', 'client', 'dist');
 
-// Correctly serve the index.html file for all other routes
+app.use(express.static(clientPath));
+
+// Serve the index.html file for any request that doesn't match a static file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'index.html'));
+  res.sendFile(path.join(clientPath, 'index.html'));
 });
 
 
