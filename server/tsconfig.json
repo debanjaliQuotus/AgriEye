@@ -9,8 +9,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node16",
-    "types": ["node"]
+    "moduleResolution": "node16"
   },
   "include": ["**/*"],
   "exclude": ["node_modules"]
