@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { createApiClient, ENDPOINTS } from '../config/api';
-import posthog from 'posthog-js';
+import { createApiClient, ENDPOINTS } from '../config/api.js';
+
 
 interface User {
   id: string;
@@ -59,16 +59,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setUser(userData);
   };
 
-  // Add this useEffect to identify user to PostHog when user state changes
-  useEffect(() => {
-    if (user && posthog && posthog.identify) {
-      posthog.identify(user.id, {
-        email: user.email,
-        name: user.name,
-        role: user.role,
-      });
-    }
-  }, [user]);
+ 
 
   const logout = () => {
     localStorage.removeItem('token');
@@ -76,7 +67,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.removeItem('userPhoneNumber');
     setUser(null);
     setToken(null);
-    posthog.reset();
+ 
   };
 
   const updateUser = (userData: User) => {

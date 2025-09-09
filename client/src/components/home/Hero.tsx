@@ -53,7 +53,7 @@ const Hero = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-emerald-100 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-sm font-[font1]">
+            <p className="text-xl text-emerald-100 mb- max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-sm font-[font1]">
               Advanced IoT sensors and AI-powered detection to protect your
               property and livestock from wildlife threats. Monitor, detect, and
               respond in real-time with cutting-edge technology.
